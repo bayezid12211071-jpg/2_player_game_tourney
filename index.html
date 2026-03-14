@@ -161,7 +161,6 @@
             justify-content: center;
             align-items: flex-end;
             gap: 20px;
-            /* FIX: Increased top margin from 40px to 80px to prevent text overlap */
             margin: 80px 0 60px 0;
             height: 320px;
         }
@@ -203,7 +202,6 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.5);
         }
         
-        /* 1st Place - Glowing Gold */
         .step-1 {
             height: 100%;
             background: linear-gradient(180deg, rgba(255,215,0,0.3) 0%, rgba(255,215,0,0.05) 100%);
@@ -216,7 +214,6 @@
         }
         .step-1 h1 { color: #ffd700; text-shadow: 0 0 20px #ffd700, 0 0 40px rgba(255,215,0,0.8); font-size: 3.5rem; margin: 0; line-height: 1; }
         
-        /* 2nd Place - Sleek Silver */
         .step-2 {
             height: 75%;
             background: linear-gradient(180deg, rgba(192,192,192,0.2) 0%, rgba(192,192,192,0.05) 100%);
@@ -228,7 +225,6 @@
         }
         .step-2 h2 { color: #c0c0c0; text-shadow: 0 0 15px #c0c0c0, 0 0 25px rgba(192,192,192,0.6); font-size: 2.5rem; margin: 0; line-height: 1; }
         
-        /* 3rd Place - Rich Bronze */
         .step-3 {
             height: 55%;
             background: linear-gradient(180deg, rgba(205,127,50,0.2) 0%, rgba(205,127,50,0.05) 100%);
@@ -270,7 +266,6 @@
             box-shadow: 0 12px 35px rgba(0,0,0,0.8);
         }
 
-        /* Card Header */
         .card-header {
             display: flex;
             justify-content: space-between;
@@ -292,7 +287,6 @@
             text-align: center;
         }
 
-        /* Card Stats */
         .card-stats {
             display: flex;
             justify-content: space-between;
@@ -305,7 +299,6 @@
         .stat-value { font-family: 'Orbitron', sans-serif; font-size: 1.4rem; color: #fff; margin-top: 3px; }
         .stat-value.pts { color: var(--accent); text-shadow: 0 0 10px var(--accent); }
 
-        /* Card Deck */
         .card-section-title { font-family: 'Orbitron', sans-serif; font-size: 1.1rem; color: #fff; margin: 10px 0 5px 0; text-transform: uppercase; border-left: 3px solid var(--accent); padding-left: 10px; }
         .card-deck {
             display: flex;
@@ -323,7 +316,6 @@
         .mini-game-card img { width: 55px; height: 55px; object-fit: cover; border-radius: 8px; border: 1px solid #444; background: #000; }
         .mini-game-card span { font-size: 0.55rem; color: #ccc; margin-top: 4px; line-height: 1.1; font-weight: bold; }
 
-        /* Card Match History */
         .history-table {
             width: 100%;
             border-collapse: collapse;
@@ -338,15 +330,13 @@
         .res-loss { color: #e74c3c; font-weight: bold; }
         .res-draw { color: #f1c40f; font-weight: bold; }
 
-        /* Player Colors */
         .c-bayezid { --accent: var(--gold); }
         .c-yusha { --accent: var(--neon-blue); }
-        .c-sadeed { --accent: #cd7f32; } /* Bronze */
+        .c-sadeed { --accent: #cd7f32; } 
         .c-zariya { --accent: var(--neon-purple); }
         .c-fatiha { --accent: var(--neon-pink); }
         .c-yusuf { --accent: var(--neon-orange); }
 
-        /* Full Games List Grid Sizing */
         .big-list-container {
             background-color: white; 
             padding: 10px;
@@ -467,13 +457,13 @@
                 </div>
                 <div class="card-section-title">Game Deck</div>
                 <div class="card-deck">
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/archery.jpg"><span>Archery</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/dots_and_boxes.jpg"><span>Dots/Boxes</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/golf_football.jpg"><span>Golf FB</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/happy_birds.jpg"><span>Happy Bird</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/math_quiz.jpg"><span>Math Quiz</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/penalty_kicks.jpg"><span>Penalty</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/ping_pong.jpg"><span>Ping Pong</span></div>
+                    <div class="mini-game-card"><img src="archery.jpg" alt="Archery"><span>Archery</span></div>
+                    <div class="mini-game-card"><img src="dots_and_boxes.jpg" alt="Dots and Boxes"><span>Dots/Boxes</span></div>
+                    <div class="mini-game-card"><img src="golf_football.jpg" alt="Golf Football"><span>Golf FB</span></div>
+                    <div class="mini-game-card"><img src="happy_birds.jpg" alt="Happy Birds"><span>Happy Bird</span></div>
+                    <div class="mini-game-card"><img src="math_quiz.jpg" alt="Math Quiz"><span>Math Quiz</span></div>
+                    <div class="mini-game-card"><img src="penalty_kicks.jpg" alt="Penalty Kicks"><span>Penalty</span></div>
+                    <div class="mini-game-card"><img src="ping_pong.jpg" alt="Ping Pong"><span>Ping Pong</span></div>
                 </div>
                 <div class="card-section-title">Match History</div>
                 <table class="history-table">
@@ -502,13 +492,13 @@
                 </div>
                 <div class="card-section-title">Game Deck</div>
                 <div class="card-deck">
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/archery.jpg"><span>Archery</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/ballgames_physics.jpg"><span>Physics</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/darts.jpg"><span>Darts</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/flappy_jump.jpg"><span>Flappy</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/golf_football.jpg"><span>Golf FB</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/spike_attacks.jpg"><span>Spike Atk</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/tennis.jpg"><span>Tennis</span></div>
+                    <div class="mini-game-card"><img src="archery.jpg" alt="Archery"><span>Archery</span></div>
+                    <div class="mini-game-card"><img src="ballgames_physics.jpg" alt="Ballgames Physics"><span>Physics</span></div>
+                    <div class="mini-game-card"><img src="darts.jpg" alt="Darts"><span>Darts</span></div>
+                    <div class="mini-game-card"><img src="flappy_jump.jpg" alt="Flappy Jump"><span>Flappy</span></div>
+                    <div class="mini-game-card"><img src="golf_football.jpg" alt="Golf Football"><span>Golf FB</span></div>
+                    <div class="mini-game-card"><img src="spike_attacks.jpg" alt="Spike Attacks"><span>Spike Atk</span></div>
+                    <div class="mini-game-card"><img src="tennis.jpg" alt="Tennis"><span>Tennis</span></div>
                 </div>
                 <div class="card-section-title">Match History</div>
                 <table class="history-table">
@@ -537,13 +527,13 @@
                 </div>
                 <div class="card-section-title">Game Deck</div>
                 <div class="card-deck">
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/darts.jpg"><span>Darts</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/fruit_duel.jpg"><span>Fruit Duel</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/golf_football.jpg"><span>Golf FB</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/happy_birds.jpg"><span>Happy Bird</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/tennis.jpg"><span>Tennis</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/sea_battle.jpg"><span>Sea Battle</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/spike_attacks.jpg"><span>Spike Atk</span></div>
+                    <div class="mini-game-card"><img src="darts.jpg" alt="Darts"><span>Darts</span></div>
+                    <div class="mini-game-card"><img src="fruit_duel.jpg" alt="Fruit Duel"><span>Fruit Duel</span></div>
+                    <div class="mini-game-card"><img src="golf_football.jpg" alt="Golf Football"><span>Golf FB</span></div>
+                    <div class="mini-game-card"><img src="happy_birds.jpg" alt="Happy Birds"><span>Happy Bird</span></div>
+                    <div class="mini-game-card"><img src="tennis.jpg" alt="Tennis"><span>Tennis</span></div>
+                    <div class="mini-game-card"><img src="sea_battle.jpg" alt="Sea Battle"><span>Sea Battle</span></div>
+                    <div class="mini-game-card"><img src="spike_attacks.jpg" alt="Spike Attacks"><span>Spike Atk</span></div>
                 </div>
                 <div class="card-section-title">Match History</div>
                 <table class="history-table">
@@ -572,13 +562,13 @@
                 </div>
                 <div class="card-section-title">Game Deck</div>
                 <div class="card-deck">
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/brick_blast.jpg"><span>Brick Blast</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/cornhole.jpg"><span>Cornhole</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/light_fingers.jpg"><span>Light Fng</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/taxi_race.jpg"><span>Taxi Race</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/tennis.jpg"><span>Tennis</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/ship_battle.jpg"><span>Ship Battle</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/spike_attacks.jpg"><span>Spike Atk</span></div>
+                    <div class="mini-game-card"><img src="brick_blast.jpg" alt="Brick Blast"><span>Brick Blast</span></div>
+                    <div class="mini-game-card"><img src="cornhole.jpg" alt="Cornhole"><span>Cornhole</span></div>
+                    <div class="mini-game-card"><img src="light_fingers.jpg" alt="Light Fingers"><span>Light Fng</span></div>
+                    <div class="mini-game-card"><img src="taxi_race.jpg" alt="Taxi Race"><span>Taxi Race</span></div>
+                    <div class="mini-game-card"><img src="tennis.jpg" alt="Tennis"><span>Tennis</span></div>
+                    <div class="mini-game-card"><img src="ship_battle.jpg" alt="Ship Battle"><span>Ship Battle</span></div>
+                    <div class="mini-game-card"><img src="spike_attacks.jpg" alt="Spike Attacks"><span>Spike Atk</span></div>
                 </div>
                 <div class="card-section-title">Match History</div>
                 <table class="history-table">
@@ -607,13 +597,13 @@
                 </div>
                 <div class="card-section-title">Game Deck</div>
                 <div class="card-deck">
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/archery.jpg"><span>Archery</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/cornhole.jpg"><span>Cornhole</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/flappy_jump.jpg"><span>Flappy</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/math_quiz.jpg"><span>Math Quiz</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/pizza_memory.jpg"><span>Pizza Mem</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/sea_battle.jpg"><span>Sea Battle</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/spike_attacks.jpg"><span>Spike Atk</span></div>
+                    <div class="mini-game-card"><img src="archery.jpg" alt="Archery"><span>Archery</span></div>
+                    <div class="mini-game-card"><img src="cornhole.jpg" alt="Cornhole"><span>Cornhole</span></div>
+                    <div class="mini-game-card"><img src="flappy_jump.jpg" alt="Flappy Jump"><span>Flappy</span></div>
+                    <div class="mini-game-card"><img src="math_quiz.jpg" alt="Math Quiz"><span>Math Quiz</span></div>
+                    <div class="mini-game-card"><img src="pizza_memory.jpg" alt="Pizza Memory"><span>Pizza Mem</span></div>
+                    <div class="mini-game-card"><img src="sea_battle.jpg" alt="Sea Battle"><span>Sea Battle</span></div>
+                    <div class="mini-game-card"><img src="spike_attacks.jpg" alt="Spike Attacks"><span>Spike Atk</span></div>
                 </div>
                 <div class="card-section-title">Match History</div>
                 <table class="history-table">
@@ -642,13 +632,13 @@
                 </div>
                 <div class="card-section-title">Game Deck</div>
                 <div class="card-deck">
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/carrom.jpg"><span>Carrom</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/disco_battle.jpg"><span>Disco Btl</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/mini_golf.jpg"><span>Mini Golf</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/ping_pong.jpg"><span>Ping Pong</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/pool.jpg"><span>Pool</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/tennis.jpg"><span>Tennis</span></div>
-                    <div class="mini-game-card"><img src="file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/ship_battle.jpg"><span>Ship Battle</span></div>
+                    <div class="mini-game-card"><img src="carrom.jpg" alt="Carrom"><span>Carrom</span></div>
+                    <div class="mini-game-card"><img src="disco_battle.jpg" alt="Disco Battle"><span>Disco Btl</span></div>
+                    <div class="mini-game-card"><img src="mini_golf.jpg" alt="Mini Golf"><span>Mini Golf</span></div>
+                    <div class="mini-game-card"><img src="ping_pong.jpg" alt="Ping Pong"><span>Ping Pong</span></div>
+                    <div class="mini-game-card"><img src="pool.jpg" alt="Pool"><span>Pool</span></div>
+                    <div class="mini-game-card"><img src="tennis.jpg" alt="Tennis"><span>Tennis</span></div>
+                    <div class="mini-game-card"><img src="ship_battle.jpg" alt="Ship Battle"><span>Ship Battle</span></div>
                 </div>
                 <div class="card-section-title">Match History</div>
                 <table class="history-table">
@@ -661,7 +651,8 @@
                 </table>
             </div>
 
-        </div> </div>
+        </div> 
+    </div>
 
     <div id="season2" class="tab-content">
         <h2 class="season-header" style="color: var(--silver);">EDITION-2 (Upcoming)</h2>
@@ -694,9 +685,10 @@
     function loadPictures() {
         const grid = document.getElementById('picture-grid');
         
+        // Updated to use relative paths for the 23 full game list pictures
         for (let i = 1; i <= 23; i++) {
             const img = document.createElement('img');
-            img.src = `file:///C:/Users/HP/OneDrive%20-%20BUET/Documents/2%20player%20game/Picture${i}.jpg`;
+            img.src = `Picture${i}.jpg`;
             img.alt = `Games Block ${i}`;
             img.className = 'grid-img';
             grid.appendChild(img);
