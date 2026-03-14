@@ -245,7 +245,7 @@
         /* --- PLAYER CARDS GRID --- */
         .cards-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* slightly reduced base minimum */
             gap: 30px;
             margin-top: 20px;
         }
@@ -344,17 +344,71 @@
             overflow: hidden;
             box-shadow: 0 0 20px rgba(69, 243, 255, 0.2);
         }
+        
         #picture-grid {
             display: grid;
             grid-template-columns: repeat(5, 1fr); 
-            gap: 0px; 
+            gap: 5px; /* Added gap for better visual spacing */
             width: 100%;
         }
+        
         .grid-img {
             width: 100%;
             height: auto;
             display: block; 
             border: none;
+            border-radius: 4px;
+        }
+
+        /* ========================================= */
+        /* --- MOBILE RESPONSIVENESS MEDIA QUERIES --- */
+        /* ========================================= */
+
+        /* Tablets and smaller screens */
+        @media (max-width: 900px) {
+            #picture-grid {
+                grid-template-columns: repeat(3, 1fr); /* Drop to 3 columns on tablets */
+            }
+        }
+
+        /* Mobile Phones */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.2rem; }
+            
+            .tab-content { padding: 15px; }
+            .prize-banner { font-size: 1.3rem; padding: 15px; }
+            .prize-banner .bangla-prize-text { font-size: 1rem; }
+            
+            /* Fix Podium for Mobile */
+            .podium-container {
+                height: 250px; /* Scale down height */
+                margin: 60px 0 40px 0;
+            }
+            .step-1 h1 { font-size: 2.2rem; }
+            .step-2 h2 { font-size: 1.6rem; }
+            .step-3 h2 { font-size: 1.4rem; }
+            .podium-points { font-size: 1rem; padding: 5px 10px; }
+            .podium-name { font-size: 0.8rem; top: -35px; }
+
+            /* Fix Cards for Mobile */
+            .cards-grid {
+                grid-template-columns: 1fr; /* Force 1 card per row */
+            }
+            .card-header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 15px;
+            }
+            .card-name-sec h3 { text-align: center; }
+            .card-stats { flex-wrap: wrap; gap: 5px; justify-content: space-around; }
+            .card-deck { justify-content: center; }
+
+            /* Fix Games List for Mobile */
+            #picture-grid {
+                grid-template-columns: repeat(2, 1fr); /* Drop to 2 columns on small phones */
+            }
         }
     </style>
 </head>
@@ -685,7 +739,6 @@
     function loadPictures() {
         const grid = document.getElementById('picture-grid');
         
-        // Updated to use relative paths for the 23 full game list pictures
         for (let i = 1; i <= 23; i++) {
             const img = document.createElement('img');
             img.src = `Picture${i}.jpg`;
