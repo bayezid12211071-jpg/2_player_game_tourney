@@ -245,7 +245,7 @@
         /* --- PLAYER CARDS GRID --- */
         .cards-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* slightly reduced base minimum */
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             gap: 30px;
             margin-top: 20px;
         }
@@ -260,6 +260,7 @@
             flex-direction: column;
             gap: 15px;
             transition: transform 0.3s ease;
+            cursor: crosshair; /* Adds a nice gaming feel when hovering over the card */
         }
         .player-card:hover {
             transform: translateY(-5px);
@@ -348,7 +349,7 @@
         #picture-grid {
             display: grid;
             grid-template-columns: repeat(5, 1fr); 
-            gap: 5px; /* Added gap for better visual spacing */
+            gap: 5px; 
             width: 100%;
         }
         
@@ -360,18 +361,13 @@
             border-radius: 4px;
         }
 
-        /* ========================================= */
         /* --- MOBILE RESPONSIVENESS MEDIA QUERIES --- */
-        /* ========================================= */
-
-        /* Tablets and smaller screens */
         @media (max-width: 900px) {
             #picture-grid {
-                grid-template-columns: repeat(3, 1fr); /* Drop to 3 columns on tablets */
+                grid-template-columns: repeat(3, 1fr); 
             }
         }
 
-        /* Mobile Phones */
         @media (max-width: 600px) {
             h1 { font-size: 2.2rem; }
             h2 { font-size: 1.2rem; }
@@ -380,35 +376,20 @@
             .prize-banner { font-size: 1.3rem; padding: 15px; }
             .prize-banner .bangla-prize-text { font-size: 1rem; }
             
-            /* Fix Podium for Mobile */
-            .podium-container {
-                height: 250px; /* Scale down height */
-                margin: 60px 0 40px 0;
-            }
+            .podium-container { height: 250px; margin: 60px 0 40px 0; }
             .step-1 h1 { font-size: 2.2rem; }
             .step-2 h2 { font-size: 1.6rem; }
             .step-3 h2 { font-size: 1.4rem; }
             .podium-points { font-size: 1rem; padding: 5px 10px; }
             .podium-name { font-size: 0.8rem; top: -35px; }
 
-            /* Fix Cards for Mobile */
-            .cards-grid {
-                grid-template-columns: 1fr; /* Force 1 card per row */
-            }
-            .card-header {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                gap: 15px;
-            }
+            .cards-grid { grid-template-columns: 1fr; }
+            .card-header { flex-direction: column; align-items: center; text-align: center; gap: 15px; }
             .card-name-sec h3 { text-align: center; }
             .card-stats { flex-wrap: wrap; gap: 5px; justify-content: space-around; }
             .card-deck { justify-content: center; }
 
-            /* Fix Games List for Mobile */
-            #picture-grid {
-                grid-template-columns: repeat(2, 1fr); /* Drop to 2 columns on small phones */
-            }
+            #picture-grid { grid-template-columns: repeat(2, 1fr); }
         }
     </style>
 </head>
@@ -422,7 +403,7 @@
         <button class="tab-link active" onclick="openTab('rules')">Rules & Format</button>
         <button class="tab-link" onclick="openTab('games-list')">Full Games List</button>
         <button class="tab-link" onclick="openTab('season1')" style="border-color: var(--neon-pink); color: var(--neon-pink);">Season-01 (2025)</button>
-        <button class="tab-link" onclick="openTab('season2')" style="border-color: var(--silver); color: var(--silver);">Season-02 (2026)</button>
+        <button class="tab-link" onclick="openTab('season2')" style="border-color: var(--silver); color: var(--silver);">Edition-2 (Upcoming)</button>
     </div>
 
     <div id="rules" class="tab-content active">
@@ -496,6 +477,8 @@
         <div class="cards-grid">
             
             <div class="player-card c-bayezid">
+                <audio class="theme-song" src="bayezid_theme.mp3" preload="auto"></audio>
+                
                 <div class="card-header">
                     <div class="card-name-sec">
                         <h3>Bayezid</h3>
@@ -531,6 +514,8 @@
             </div>
 
             <div class="player-card c-yusha">
+                <audio class="theme-song" src="ezios_family.mp3" preload="auto"></audio>
+                
                 <div class="card-header">
                     <div class="card-name-sec">
                         <h3>Yusha</h3>
@@ -566,6 +551,8 @@
             </div>
 
             <div class="player-card c-sadeed">
+                <audio class="theme-song" src="sadeed_theme.mp3" preload="auto"></audio>
+                
                 <div class="card-header">
                     <div class="card-name-sec">
                         <h3>Sadeed</h3>
@@ -601,6 +588,8 @@
             </div>
 
             <div class="player-card c-zariya">
+                <audio class="theme-song" src="zariya_theme.mp3" preload="auto"></audio>
+                
                 <div class="card-header">
                     <div class="card-name-sec">
                         <h3>Zariya</h3>
@@ -636,6 +625,8 @@
             </div>
 
             <div class="player-card c-fatiha">
+                <audio class="theme-song" src="fatiha_theme.mp3" preload="auto"></audio>
+                
                 <div class="card-header">
                     <div class="card-name-sec">
                         <h3>Fatiha</h3>
@@ -671,6 +662,8 @@
             </div>
 
             <div class="player-card c-yusuf">
+                <audio class="theme-song" src="yusuf_theme.mp3" preload="auto"></audio>
+                
                 <div class="card-header">
                     <div class="card-name-sec">
                         <h3>Yusuf</h3>
@@ -748,7 +741,37 @@
         }
     }
 
-    window.onload = loadPictures;
+    // --- AUDIO HOVER EFFECT JAVASCRIPT ---
+    function setupAudioHover() {
+        const playerCards = document.querySelectorAll('.player-card');
+        
+        playerCards.forEach(card => {
+            const audio = card.querySelector('.theme-song');
+            
+            if (audio) {
+                audio.volume = 0.5; // Sets volume to 50% so it doesn't jump scare anyone
+                
+                card.addEventListener('mouseenter', () => {
+                    // Try to play the audio.
+                    // Modern browsers will block autoplay if the user hasn't clicked on the page first.
+                    audio.play().catch(error => {
+                        console.log("Browser blocked autoplay. The user must click somewhere on the website first.");
+                    });
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    audio.pause();
+                    audio.currentTime = 0; // Resets the song back to the beginning
+                });
+            }
+        });
+    }
+
+    // Run both setups when the page loads
+    window.onload = () => {
+        loadPictures();
+        setupAudioHover();
+    };
 </script>
 
 </body>
