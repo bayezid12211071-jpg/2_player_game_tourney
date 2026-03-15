@@ -260,7 +260,7 @@
             flex-direction: column;
             gap: 15px;
             transition: transform 0.3s ease;
-            cursor: crosshair; /* Adds a nice gaming feel when hovering over the card */
+            cursor: crosshair; 
         }
         .player-card:hover {
             transform: translateY(-5px);
@@ -403,7 +403,7 @@
         <button class="tab-link active" onclick="openTab('rules')">Rules & Format</button>
         <button class="tab-link" onclick="openTab('games-list')">Full Games List</button>
         <button class="tab-link" onclick="openTab('season1')" style="border-color: var(--neon-pink); color: var(--neon-pink);">Season-01 (2025)</button>
-        <button class="tab-link" onclick="openTab('season2')" style="border-color: var(--silver); color: var(--silver);">Season-02 (2026)</button>
+        <button class="tab-link" onclick="openTab('season2')" style="border-color: var(--silver); color: var(--silver);">Edition-2 (Upcoming)</button>
     </div>
 
     <div id="rules" class="tab-content active">
@@ -450,6 +450,9 @@
     </div>
 
     <div id="season1" class="tab-content">
+        
+        <audio id="season1-bg-music" src="sadeed_theme.mp3" preload="auto" loop></audio>
+        
         <h2 class="season-header" style="color: var(--neon-pink);">SEASON-01 (2025) ARCHIVE</h2>
         
         <div class="podium-container">
@@ -551,7 +554,7 @@
             </div>
 
             <div class="player-card c-sadeed">
-                <audio class="theme-song" src="sadeed_theme_2.mp3" preload="auto"></audio>
+                <audio class="theme-song" src="sadeed_theme.mp3" preload="auto"></audio>
                 
                 <div class="card-header">
                     <div class="card-name-sec">
@@ -727,6 +730,18 @@
         
         document.getElementById(tabName).classList.add("active");
         event.currentTarget.classList.add("active");
+
+        // --- NEW: Play Background Music specifically for Season-01 Tab ---
+        const season1Music = document.getElementById("season1-bg-music");
+        if (season1Music) {
+            if (tabName === 'season1') {
+                season1Music.volume = 0.3; // Low volume so card hover themes still pop
+                season1Music.play();
+            } else {
+                season1Music.pause();
+                season1Music.currentTime = 0; // Resets song if you switch away and come back
+            }
+        }
     }
 
     function loadPictures() {
@@ -749,11 +764,9 @@
             const audio = card.querySelector('.theme-song');
             
             if (audio) {
-                audio.volume = 0.5; // Sets volume to 50% so it doesn't jump scare anyone
+                audio.volume = 0.6; // Slightly louder than the background music
                 
                 card.addEventListener('mouseenter', () => {
-                    // Try to play the audio.
-                    // Modern browsers will block autoplay if the user hasn't clicked on the page first.
                     audio.play().catch(error => {
                         console.log("Browser blocked autoplay. The user must click somewhere on the website first.");
                     });
@@ -761,7 +774,7 @@
                 
                 card.addEventListener('mouseleave', () => {
                     audio.pause();
-                    audio.currentTime = 0; // Resets the song back to the beginning
+                    audio.currentTime = 0; 
                 });
             }
         });
