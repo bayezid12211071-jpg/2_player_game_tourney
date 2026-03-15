@@ -705,10 +705,10 @@
     </div>
 
     <div id="season2" class="tab-content">
-        <h2 class="season-header" style="color: var(--silver);">SEASON-02 (2026)</h2>
+        <h2 class="season-header" style="color: var(--silver);">Season-2 (2026)</h2>
         <div style="text-align: center; padding: 50px 0;">
             <h1 style="font-size: 2rem; color: #444; text-shadow: none; background: none; -webkit-text-fill-color: #444;">TOURNAMENT HAS NOT STARTED YET</h1>
-            <p style="color: #666;">Check back later for Decks, Match Tables, and Results for Season-02!</p>
+            <p style="color: #666;">Check back later for Decks, Match Tables, and Results for Edition-2!</p>
         </div>
     </div>
 
@@ -731,22 +731,28 @@
         document.getElementById(tabName).classList.add("active");
         event.currentTarget.classList.add("active");
 
-        // --- NEW: Play Background Music specifically for Season-01 Tab ---
         const season1Music = document.getElementById("season1-bg-music");
         if (season1Music) {
             if (tabName === 'season1') {
-                season1Music.volume = 0.3; // Low volume so card hover themes still pop
-                season1Music.play();
+                season1Music.volume = 0.3; 
+                
+                let playPromise = season1Music.play();
+                if (playPromise !== undefined) {
+                    playPromise.then(_ => {
+                        console.log("Season 1 Music playing!");
+                    }).catch(error => {
+                        console.error("Music playback failed. Reason:", error.message);
+                    });
+                }
             } else {
                 season1Music.pause();
-                season1Music.currentTime = 0; // Resets song if you switch away and come back
+                season1Music.currentTime = 0; 
             }
         }
     }
 
     function loadPictures() {
         const grid = document.getElementById('picture-grid');
-        
         for (let i = 1; i <= 23; i++) {
             const img = document.createElement('img');
             img.src = `Picture${i}.jpg`;
@@ -756,31 +762,50 @@
         }
     }
 
-    // --- AUDIO HOVER EFFECT JAVASCRIPT ---
     function setupAudioHover() {
         const playerCards = document.querySelectorAll('.player-card');
+        const season1Music = document.getElementById("season1-bg-music");
         
         playerCards.forEach(card => {
             const audio = card.querySelector('.theme-song');
             
             if (audio) {
-                audio.volume = 0.6; // Slightly louder than the background music
+                audio.volume = 0.6; 
                 
                 card.addEventListener('mouseenter', () => {
-                    audio.play().catch(error => {
-                        console.log("Browser blocked autoplay. The user must click somewhere on the website first.");
-                    });
+                    // PAUSE the background music when hovering starts
+                    if (season1Music) {
+                        season1Music.pause();
+                    }
+
+                    // PLAY the card's theme song
+                    let hoverPromise = audio.play();
+                    if (hoverPromise !== undefined) {
+                        hoverPromise.catch(error => {
+                            console.log("Hover audio blocked:", error.message);
+                        });
+                    }
                 });
                 
                 card.addEventListener('mouseleave', () => {
+                    // STOP the card's theme song
                     audio.pause();
                     audio.currentTime = 0; 
+
+                    // RESUME the background music, but only if we are still on the Season 1 tab
+                    if (season1Music && document.getElementById('season1').classList.contains('active')) {
+                        let bgPromise = season1Music.play();
+                        if (bgPromise !== undefined) {
+                            bgPromise.catch(error => {
+                                console.log("BG music resume blocked:", error.message);
+                            });
+                        }
+                    }
                 });
             }
         });
     }
 
-    // Run both setups when the page loads
     window.onload = () => {
         loadPictures();
         setupAudioHover();
