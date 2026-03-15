@@ -331,7 +331,6 @@
         .res-loss { color: #e74c3c; font-weight: bold; }
         .res-draw { color: #f1c40f; font-weight: bold; }
         .res-pending { color: #888; font-style: italic; }
-        .round-name { font-size: 0.75rem; color: #888; text-transform: uppercase; }
 
         .c-bayezid { --accent: var(--gold); }
         .c-yusha { --accent: var(--neon-blue); }
@@ -392,8 +391,6 @@
             .card-deck { justify-content: center; }
 
             #picture-grid { grid-template-columns: repeat(2, 1fr); }
-            
-            .round-name { display: block; font-size: 0.65rem; margin-bottom: 3px; }
         }
     </style>
 </head>
@@ -407,7 +404,7 @@
         <button class="tab-link active" onclick="openTab('rules')">Rules & Format</button>
         <button class="tab-link" onclick="openTab('games-list')">Full Games List</button>
         <button class="tab-link" onclick="openTab('season1')" style="border-color: var(--neon-pink); color: var(--neon-pink);">Season-01 (2025)</button>
-        <button class="tab-link" onclick="openTab('season2')" style="border-color: var(--silver); color: var(--silver);">Season-02 (2026)</button>
+        <button class="tab-link" onclick="openTab('season2')" style="border-color: var(--neon-green); color: var(--neon-green);">Season-02 (2026)</button>
     </div>
 
     <div id="rules" class="tab-content active">
@@ -454,8 +451,6 @@
     </div>
 
     <div id="season1" class="tab-content">
-        
-        <audio id="season1-bg-music" src="sadeed_theme.mp3" preload="auto" loop></audio>
         
         <h2 class="season-header" style="color: var(--neon-pink);">SEASON-01 (2025) ARCHIVE</h2>
         
@@ -631,43 +626,6 @@
                 </table>
             </div>
 
-            <div class="player-card c-fatiha">
-                <audio class="theme-song" src="fatiha_theme.mp3" preload="auto"></audio>
-                
-                <div class="card-header">
-                    <div class="card-name-sec">
-                        <h3>Fatiha</h3>
-                        <div class="nickname">Rose Phantom</div>
-                    </div>
-                    <div class="card-rank">5TH PLACE</div>
-                </div>
-                <div class="card-stats">
-                    <div class="stat-item"><div class="stat-label">Net Pts</div><div class="stat-value pts">-9</div></div>
-                    <div class="stat-item"><div class="stat-label">Wins</div><div class="stat-value">0</div></div>
-                    <div class="stat-item"><div class="stat-label">Draws</div><div class="stat-value">2</div></div>
-                    <div class="stat-item"><div class="stat-label">Losses</div><div class="stat-value">3</div></div>
-                </div>
-                <div class="card-section-title">Game Deck</div>
-                <div class="card-deck">
-                    <div class="mini-game-card"><img src="archery.jpg" alt="Archery"><span>Archery</span></div>
-                    <div class="mini-game-card"><img src="cornhole.jpg" alt="Cornhole"><span>Cornhole</span></div>
-                    <div class="mini-game-card"><img src="flappy_jump.jpg" alt="Flappy Jump"><span>Flappy</span></div>
-                    <div class="mini-game-card"><img src="math_quiz.jpg" alt="Math Quiz"><span>Math Quiz</span></div>
-                    <div class="mini-game-card"><img src="pizza_memory.jpg" alt="Pizza Memory"><span>Pizza Mem</span></div>
-                    <div class="mini-game-card"><img src="sea_battle.jpg" alt="Sea Battle"><span>Sea Battle</span></div>
-                    <div class="mini-game-card"><img src="spike_attacks.jpg" alt="Spike Attacks"><span>Spike Atk</span></div>
-                </div>
-                <div class="card-section-title">Match History</div>
-                <table class="history-table">
-                    <tr><th>Opponent</th><th>Score</th><th>Result</th></tr>
-                    <tr><td>Yusha (Random gamer)</td><td>2 - 4</td><td class="res-loss">LOSS</td></tr>
-                    <tr><td>Yusuf (Aragorn)</td><td>3 - 3</td><td class="res-draw">DRAW</td></tr>
-                    <tr><td>Zariya (Player 067)</td><td>2.5 - 3.5</td><td class="res-loss">LOSS</td></tr>
-                    <tr><td>Sadeed (Palmer)</td><td>3 - 3</td><td class="res-draw">DRAW</td></tr>
-                    <tr><td>Bayezid (Not strong)</td><td>0 - 6</td><td class="res-loss">LOSS</td></tr>
-                </table>
-            </div>
-
             <div class="player-card c-yusuf">
                 <audio class="theme-song" src="yusuf_theme.mp3" preload="auto"></audio>
                 
@@ -676,7 +634,7 @@
                         <h3>Yusuf</h3>
                         <div class="nickname">Aragorn</div>
                     </div>
-                    <div class="card-rank">6TH PLACE</div>
+                    <div class="card-rank">5TH PLACE</div>
                 </div>
                 <div class="card-stats">
                     <div class="stat-item"><div class="stat-label">Net Pts</div><div class="stat-value pts">-12</div></div>
@@ -705,13 +663,49 @@
                 </table>
             </div>
 
+            <div class="player-card c-fatiha">
+                <audio class="theme-song" src="fatiha_theme.mp3" preload="auto"></audio>
+                
+                <div class="card-header">
+                    <div class="card-name-sec">
+                        <h3>Fatiha</h3>
+                        <div class="nickname">Rose Phantom</div>
+                    </div>
+                    <div class="card-rank">6TH PLACE</div>
+                </div>
+                <div class="card-stats">
+                    <div class="stat-item"><div class="stat-label">Net Pts</div><div class="stat-value pts">-9</div></div>
+                    <div class="stat-item"><div class="stat-label">Wins</div><div class="stat-value">0</div></div>
+                    <div class="stat-item"><div class="stat-label">Draws</div><div class="stat-value">2</div></div>
+                    <div class="stat-item"><div class="stat-label">Losses</div><div class="stat-value">3</div></div>
+                </div>
+                <div class="card-section-title">Game Deck</div>
+                <div class="card-deck">
+                    <div class="mini-game-card"><img src="archery.jpg" alt="Archery"><span>Archery</span></div>
+                    <div class="mini-game-card"><img src="cornhole.jpg" alt="Cornhole"><span>Cornhole</span></div>
+                    <div class="mini-game-card"><img src="flappy_jump.jpg" alt="Flappy Jump"><span>Flappy</span></div>
+                    <div class="mini-game-card"><img src="math_quiz.jpg" alt="Math Quiz"><span>Math Quiz</span></div>
+                    <div class="mini-game-card"><img src="pizza_memory.jpg" alt="Pizza Memory"><span>Pizza Mem</span></div>
+                    <div class="mini-game-card"><img src="sea_battle.jpg" alt="Sea Battle"><span>Sea Battle</span></div>
+                    <div class="mini-game-card"><img src="spike_attacks.jpg" alt="Spike Attacks"><span>Spike Atk</span></div>
+                </div>
+                <div class="card-section-title">Match History</div>
+                <table class="history-table">
+                    <tr><th>Opponent</th><th>Score</th><th>Result</th></tr>
+                    <tr><td>Yusha (Random gamer)</td><td>2 - 4</td><td class="res-loss">LOSS</td></tr>
+                    <tr><td>Yusuf (Aragorn)</td><td>3 - 3</td><td class="res-draw">DRAW</td></tr>
+                    <tr><td>Zariya (Player 067)</td><td>2.5 - 3.5</td><td class="res-loss">LOSS</td></tr>
+                    <tr><td>Sadeed (Palmer)</td><td>3 - 3</td><td class="res-draw">DRAW</td></tr>
+                    <tr><td>Bayezid (Not strong)</td><td>0 - 6</td><td class="res-loss">LOSS</td></tr>
+                </table>
+            </div>
+
         </div> 
     </div>
 
     <div id="season2" class="tab-content">
-        <audio id="season2-bg-music" src="sadeed_theme.mp3" preload="auto" loop></audio>
         
-        <h2 class="season-header" style="color: var(--silver);">SEASON-02 (2026) MATCHUPS</h2>
+        <h2 class="season-header" style="color: var(--neon-green);">SEASON-02 (2026) MATCHUPS</h2>
         
         <div class="description-box" style="margin-top: 20px;">
             <h3>Player Profiles & Selected Game Decks</h3>
@@ -746,12 +740,12 @@
                 </div>
                 <div class="card-section-title">Fixtures / Match History</div>
                 <table class="history-table">
-                    <tr><th>Round</th><th>Opponent</th><th>Score</th><th>Result</th></tr>
-                    <tr><td><span class="round-name">1: El Classico</span></td><td>Sadeed (Chromastone)</td><td>-</td><td class="res-pending">Pending</td></tr>
-                    <tr><td><span class="round-name">2: Mysterious</span></td><td>Yusuf (Nigger-67)</td><td>-</td><td class="res-pending">Pending</td></tr>
-                    <tr><td><span class="round-name">3: Sibling Btl</span></td><td>Yusha (Evo-El-Dorado-69)</td><td>-</td><td class="res-pending">Pending</td></tr>
-                    <tr><td><span class="round-name">4: Final Push</span></td><td>Zariya (Scenecore)</td><td>-</td><td class="res-pending">Pending</td></tr>
-                    <tr><td><span class="round-name">5: Do or Die</span></td><td>Fatiha (Anomaly Void-67)</td><td>-</td><td class="res-pending">Pending</td></tr>
+                    <tr><th>Opponent</th><th>Score</th><th>Result</th></tr>
+                    <tr><td>Sadeed (Chromastone)</td><td>-</td><td class="res-pending">Pending</td></tr>
+                    <tr><td>Yusuf (Nigger-67)</td><td>-</td><td class="res-pending">Pending</td></tr>
+                    <tr><td>Yusha (Evo-El-Dorado-69)</td><td>-</td><td class="res-pending">Pending</td></tr>
+                    <tr><td>Zariya (Scenecore)</td><td>-</td><td class="res-pending">Pending</td></tr>
+                    <tr><td>Fatiha (Anomaly Void-67)</td><td>-</td><td class="res-pending">Pending</td></tr>
                 </table>
             </div>
             
@@ -782,12 +776,12 @@
                 </div>
                 <div class="card-section-title">Fixtures / Match History</div>
                 <table class="history-table">
-                    <tr><th>Round</th><th>Opponent</th><th>Score</th><th>Result</th></tr>
-                    <tr><td><span class="round-name">1: El Classico</span></td><td>Yusuf (Nigger-67)</td><td>-</td><td class="res-pending">Pending</td></tr>
-                    <tr><td><span class="round-name">2: Mysterious</span></td><td>Zariya (Scenecore)</td><td>-</td><td class="res-pending">Pending</td></tr>
-                    <tr><td><span class="round-name">3: Sibling Btl</span></td><td>Bayezid (Easy_Target)</td><td>-</td><td class="res-pending">Pending</td></tr>
-                    <tr><td><span class="round-name">4: Final Push</span></td><td>Fatiha (Anomaly Void-67)</td><td>-</td><td class="res-pending">Pending</td></tr>
-                    <tr><td><span class="round-name">5: Do or Die</span></td><td>Sadeed (Chromastone)</td><td>-</td><td class="res-pending">Pending</td></tr>
+                    <tr><th>Opponent</th><th>Score</th><th>Result</th></tr>
+                    <tr><td>Yusuf (Nigger-67)</td><td>-</td><td class="res-pending">Pending</td></tr>
+                    <tr><td>Zariya (Scenecore)</td><td>-</td><td class="res-pending">Pending</td></tr>
+                    <tr><td>Bayezid (Easy_Target)</td><td>-</td><td class="res-pending">Pending</td></tr>
+                    <tr><td>Fatiha (Anomaly Void-67)</td><td>-</td><td class="res-pending">Pending</td></tr>
+                    <tr><td>Sadeed (Chromastone)</td><td>-</td><td class="res-pending">Pending</td></tr>
                 </table>
             </div>
 
@@ -818,12 +812,12 @@
                 </div>
                 <div class="card-section-title">Fixtures / Match History</div>
                 <table class="history-table">
-                    <tr><th>Round</th><th>Opponent</th><th>Score</th><th>Result</th></tr>
-                    <tr><td><span class="round-name">1: El Classico</span></td><td>Zariya (Scenecore)</td><td>-</td><td class="res-pending">Pending</td></tr>
-                    <tr><td><span class="round-name">2: Mysterious</span></td><td>Sadeed (Chromastone)</td><td>-</td><td class="res-pending">Pending</td></tr>
-                    <tr><td><span class="round-name">3: Sibling Btl</span></td><td>Yusuf (Nigger-67)</td><td>-</td><td class="res-pending">Pending</td></tr>
-                    <tr><td><span class="round-name">4: Final Push</span></td><td>Yusha (Evo-El-Dorado-69)</td><td>-</td><td class="res-pending">Pending</td></tr>
-                    <tr><td><span class="round-name">5: Do or Die</span></td><td>Bayezid (Easy_Target)</td><td>-</td><td class="res-pending">Pending</td></tr>
+                    <tr><th>Opponent</th><th>Score</th><th>Result</th></tr>
+                    <tr><td>Zariya (Scenecore)</td><td>-</td><td class="res-pending">Pending</td></tr>
+                    <tr><td>Sadeed (Chromastone)</td><td>-</td><td class="res-pending">Pending</td></tr>
+                    <tr><td>Yusuf (Nigger-67)</td><td>-</td><td class="res-pending">Pending</td></tr>
+                    <tr><td>Yusha (Evo-El-Dorado-69)</td><td>-</td><td class="res-pending">Pending</td></tr>
+                    <tr><td>Bayezid (Easy_Target)</td><td>-</td><td class="res-pending">Pending</td></tr>
                 </table>
             </div>
 
@@ -854,12 +848,12 @@
                 </div>
                 <div class="card-section-title">Fixtures / Match History</div>
                 <table class="history-table">
-                    <tr><th>Round</th><th>Opponent</th><th>Score</th><th>Result</th></tr>
-                    <tr><td><span class="round-name">1: El Classico</span></td><td>Fatiha (Anomaly Void-67)</td><td>-</td><td class="res-pending">Pending</td></tr>
-                    <tr><td><span class="round-name">2: Mysterious</span></td><td>Yusha (Evo-El-Dorado-69)</td><td>-</td><td class="res-pending">Pending</td></tr>
-                    <tr><td><span class="round-name">3: Sibling Btl</span></td><td>Sadeed (Chromastone)</td><td>-</td><td class="res-pending">Pending</td></tr>
-                    <tr><td><span class="round-name">4: Final Push</span></td><td>Bayezid (Easy_Target)</td><td>-</td><td class="res-pending">Pending</td></tr>
-                    <tr><td><span class="round-name">5: Do or Die</span></td><td>Yusuf (Nigger-67)</td><td>-</td><td class="res-pending">Pending</td></tr>
+                    <tr><th>Opponent</th><th>Score</th><th>Result</th></tr>
+                    <tr><td>Fatiha (Anomaly Void-67)</td><td>-</td><td class="res-pending">Pending</td></tr>
+                    <tr><td>Yusha (Evo-El-Dorado-69)</td><td>-</td><td class="res-pending">Pending</td></tr>
+                    <tr><td>Sadeed (Chromastone)</td><td>-</td><td class="res-pending">Pending</td></tr>
+                    <tr><td>Bayezid (Easy_Target)</td><td>-</td><td class="res-pending">Pending</td></tr>
+                    <tr><td>Yusuf (Nigger-67)</td><td>-</td><td class="res-pending">Pending</td></tr>
                 </table>
             </div>
 
@@ -890,12 +884,12 @@
                 </div>
                 <div class="card-section-title">Fixtures / Match History</div>
                 <table class="history-table">
-                    <tr><th>Round</th><th>Opponent</th><th>Score</th><th>Result</th></tr>
-                    <tr><td><span class="round-name">1: El Classico</span></td><td>Yusha (Evo-El-Dorado-69)</td><td>-</td><td class="res-pending">Pending</td></tr>
-                    <tr><td><span class="round-name">2: Mysterious</span></td><td>Bayezid (Easy_Target)</td><td>-</td><td class="res-pending">Pending</td></tr>
-                    <tr><td><span class="round-name">3: Sibling Btl</span></td><td>Fatiha (Anomaly Void-67)</td><td>-</td><td class="res-pending">Pending</td></tr>
-                    <tr><td><span class="round-name">4: Final Push</span></td><td>Sadeed (Chromastone)</td><td>-</td><td class="res-pending">Pending</td></tr>
-                    <tr><td><span class="round-name">5: Do or Die</span></td><td>Zariya (Scenecore)</td><td>-</td><td class="res-pending">Pending</td></tr>
+                    <tr><th>Opponent</th><th>Score</th><th>Result</th></tr>
+                    <tr><td>Yusha (Evo-El-Dorado-69)</td><td>-</td><td class="res-pending">Pending</td></tr>
+                    <tr><td>Bayezid (Easy_Target)</td><td>-</td><td class="res-pending">Pending</td></tr>
+                    <tr><td>Fatiha (Anomaly Void-67)</td><td>-</td><td class="res-pending">Pending</td></tr>
+                    <tr><td>Sadeed (Chromastone)</td><td>-</td><td class="res-pending">Pending</td></tr>
+                    <tr><td>Zariya (Scenecore)</td><td>-</td><td class="res-pending">Pending</td></tr>
                 </table>
             </div>
 
@@ -926,12 +920,12 @@
                 </div>
                 <div class="card-section-title">Fixtures / Match History</div>
                 <table class="history-table">
-                    <tr><th>Round</th><th>Opponent</th><th>Score</th><th>Result</th></tr>
-                    <tr><td><span class="round-name">1: El Classico</span></td><td>Bayezid (Easy_Target)</td><td>-</td><td class="res-pending">Pending</td></tr>
-                    <tr><td><span class="round-name">2: Mysterious</span></td><td>Fatiha (Anomaly Void-67)</td><td>-</td><td class="res-pending">Pending</td></tr>
-                    <tr><td><span class="round-name">3: Sibling Btl</span></td><td>Zariya (Scenecore)</td><td>-</td><td class="res-pending">Pending</td></tr>
-                    <tr><td><span class="round-name">4: Final Push</span></td><td>Yusuf (Nigger-67)</td><td>-</td><td class="res-pending">Pending</td></tr>
-                    <tr><td><span class="round-name">5: Do or Die</span></td><td>Yusha (Evo-El-Dorado-69)</td><td>-</td><td class="res-pending">Pending</td></tr>
+                    <tr><th>Opponent</th><th>Score</th><th>Result</th></tr>
+                    <tr><td>Bayezid (Easy_Target)</td><td>-</td><td class="res-pending">Pending</td></tr>
+                    <tr><td>Fatiha (Anomaly Void-67)</td><td>-</td><td class="res-pending">Pending</td></tr>
+                    <tr><td>Zariya (Scenecore)</td><td>-</td><td class="res-pending">Pending</td></tr>
+                    <tr><td>Yusuf (Nigger-67)</td><td>-</td><td class="res-pending">Pending</td></tr>
+                    <tr><td>Yusha (Evo-El-Dorado-69)</td><td>-</td><td class="res-pending">Pending</td></tr>
                 </table>
             </div>
             
@@ -956,27 +950,6 @@
         
         document.getElementById(tabName).classList.add("active");
         event.currentTarget.classList.add("active");
-
-        const season1Music = document.getElementById("season1-bg-music");
-        const season2Music = document.getElementById("season2-bg-music");
-
-        // Pause both by default when switching tabs
-        if (season1Music) { season1Music.pause(); season1Music.currentTime = 0; }
-        if (season2Music) { season2Music.pause(); season2Music.currentTime = 0; }
-
-        let activeMusic = null;
-        if (tabName === 'season1') activeMusic = season1Music;
-        if (tabName === 'season2') activeMusic = season2Music;
-
-        if (activeMusic) {
-            activeMusic.volume = 0.3; 
-            let playPromise = activeMusic.play();
-            if (playPromise !== undefined) {
-                playPromise.catch(error => {
-                    console.error("Music playback failed. Reason:", error.message);
-                });
-            }
-        }
     }
 
     function loadPictures() {
@@ -1000,15 +973,6 @@
                 audio.volume = 0.6; 
                 
                 card.addEventListener('mouseenter', () => {
-                    // Check which tab is currently active to pause the correct background music
-                    const activeTabId = document.querySelector('.tab-content.active').id;
-                    const bgMusic = document.getElementById(activeTabId + '-bg-music');
-                    
-                    if (bgMusic) {
-                        bgMusic.pause();
-                    }
-
-                    // PLAY the card's theme song
                     let hoverPromise = audio.play();
                     if (hoverPromise !== undefined) {
                         hoverPromise.catch(error => {
@@ -1018,22 +982,8 @@
                 });
                 
                 card.addEventListener('mouseleave', () => {
-                    // STOP the card's theme song
                     audio.pause();
                     audio.currentTime = 0; 
-
-                    // RESUME the background music for the active tab
-                    const activeTabId = document.querySelector('.tab-content.active').id;
-                    const bgMusic = document.getElementById(activeTabId + '-bg-music');
-                    
-                    if (bgMusic) {
-                        let bgPromise = bgMusic.play();
-                        if (bgPromise !== undefined) {
-                            bgPromise.catch(error => {
-                                console.log("BG music resume blocked:", error.message);
-                            });
-                        }
-                    }
                 });
             }
         });
